@@ -21,6 +21,7 @@ namespace ReadyDev_backend.Controllers
             this._userService = userService;
         }
 
+
         //GET api/<UserController>/3
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
