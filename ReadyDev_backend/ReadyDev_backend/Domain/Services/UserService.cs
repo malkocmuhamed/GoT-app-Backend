@@ -17,6 +17,11 @@ namespace ReadyDev_backend.Domain.Services
             this._userRepository = userRepository;
         }
 
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _userRepository.GetAllUsers();
+        }
+
         public Task<User> GetUserById(int id)
         {
             return _userRepository.GetUserById(id);

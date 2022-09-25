@@ -10,6 +10,8 @@ namespace ReadyDev_backend.DAL.Interfaces
     {
         //public IEnumerable<Song> GetAllSongs();
 
+        public IEnumerable<User> GetAllUsers();
+
         public Task<User> GetUserById(int id);
 
         public Task CreateUser(User user);

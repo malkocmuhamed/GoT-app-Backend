@@ -65,3 +65,4 @@ C:\ReadyDevTask\ReadyDevTask\ReadyDev_backend\ReadyDev_backend\obj\Debug\netcore
 C:\ReadyDevTask\ReadyDevTask\ReadyDev_backend\ReadyDev_backend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\ReadyDevTask\ReadyDevTask\ReadyDev_backend\ReadyDev_backend\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
 C:\ReadyDevTask\ReadyDevTask\ReadyDev_backend\ReadyDev_backend\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\ReadyDevTask\ReadyDevTask\ReadyDev_backend\ReadyDev_backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

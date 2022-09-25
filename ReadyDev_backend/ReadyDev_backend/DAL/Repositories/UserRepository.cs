@@ -17,6 +17,11 @@ namespace ReadyDev_backend.DAL.Repositories
             this._context = context;
         }
 
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _context.Users;
+        }
+
         public async Task<User> GetUserById(int id)
         {
             return await _context.Users.SingleOrDefaultAsync(c => c.Id == id);
