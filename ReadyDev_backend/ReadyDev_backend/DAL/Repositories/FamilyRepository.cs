@@ -33,10 +33,10 @@ namespace ReadyDev_backend.DAL.Repositories
             return _context.Families;
         }
 
-        public void EditFamily(Family family)
+        public async Task EditFamily(Family family)
         {
             _context.Families.Update(family);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public void DeleteFamily(Family family)

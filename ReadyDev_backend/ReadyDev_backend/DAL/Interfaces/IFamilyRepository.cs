@@ -16,7 +16,7 @@ namespace ReadyDev_backend.DAL.Interfaces
 
         public Task<Family> GetFamilyById(int id);
 
-        public void EditFamily(Family family);
+        public Task EditFamily(Family family);
 
         public void DeleteFamily(Family family);
     }

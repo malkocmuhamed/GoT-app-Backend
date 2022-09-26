@@ -32,12 +32,12 @@ namespace ReadyDev_backend.Domain.Services
             return _familyRepository.GetAllFamilies();
         }
 
-        public void EditFamily(Family familyInDB, Family family)
+        public Task EditFamily(Family familyInDB, Family family)
         {
             familyInDB.FamilyName = family.FamilyName;
             familyInDB.Logo = family.Logo;
             familyInDB.Representative = family.Representative;
-             _familyRepository.EditFamily(familyInDB);
+            return _familyRepository.EditFamily(familyInDB);
         }
 
         public void DeleteFamily(Family family)

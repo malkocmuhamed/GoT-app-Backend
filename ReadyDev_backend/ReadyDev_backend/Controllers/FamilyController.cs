@@ -64,15 +64,16 @@ namespace ReadyDev_backend.Controllers
         }
 
         [HttpPut]
+        [Route("editFamily")]
         [Authorize]
         public async Task<IActionResult> EditFamily(Family family)
         {
-            Family familyInDB = await _familyService.GetFamilyById(family.Id);
+            Family familyInDB =  await _familyService.GetFamilyById(family.Id);
             if (familyInDB == null)
             {
                 return NotFound();
             }
-            _familyService.EditFamily(familyInDB, family);
+            await _familyService.EditFamily(familyInDB, family);
             return Ok();
         }
 

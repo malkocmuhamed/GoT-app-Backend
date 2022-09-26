@@ -52,7 +52,6 @@ namespace ReadyDev_backend.Controllers
             return Ok(await _userService.GetUserById(id));
         }
 
-
         //POST api/<UserController>
         [HttpPost]
         [Route("register")]

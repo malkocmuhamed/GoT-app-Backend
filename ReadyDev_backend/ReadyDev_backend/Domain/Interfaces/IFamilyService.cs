@@ -16,7 +16,7 @@ namespace ReadyDev_backend.Domain.Interfaces
 
         public Task<Family> GetFamilyById(int id);
 
-        public void EditFamily(Family familyInDB, Family family);
+        public Task EditFamily(Family familyInDB, Family family);
 
         public void DeleteFamily(Family family);
     }
