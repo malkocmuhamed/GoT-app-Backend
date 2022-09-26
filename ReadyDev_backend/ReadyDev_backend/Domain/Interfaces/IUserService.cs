@@ -10,8 +10,10 @@ namespace ReadyDev_backend.Domain.Interfaces
     {
         public IEnumerable<User> GetAllUsers();
 
+        public User GetUser(User user);
+
         public Task<User> GetUserById(int id);
 
-        public Task CreateUser(User user);
+        public void CreateUser(User user);
     }
 }

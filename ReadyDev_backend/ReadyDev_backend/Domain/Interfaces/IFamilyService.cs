@@ -10,12 +10,14 @@ namespace ReadyDev_backend.Domain.Interfaces
     {
         public IEnumerable<Family> GetAllFamilies();
 
-        public Task CreateFamily(Family family);
+        public List<Family> GetFamiliesByUser(int userId);
+
+        public void CreateFamily(Family family);
 
         public Task<Family> GetFamilyById(int id);
 
-        public Task EditFamily(Family familyInDB, Family family);
+        public void EditFamily(Family familyInDB, Family family);
 
-        public Task DeleteFamily(Family family);
+        public void DeleteFamily(Family family);
     }
 }

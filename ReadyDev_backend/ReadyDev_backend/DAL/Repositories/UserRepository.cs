@@ -12,9 +12,16 @@ namespace ReadyDev_backend.DAL.Repositories
     {
         got_databaseContext _context;
 
+
         public UserRepository(got_databaseContext context)
         {
             this._context = context;
+        }
+
+        public User GetUser(User user)
+        {
+            return _context.Users.Where(x => x.Username.ToLower() == user.Username.ToLower()
+                && x.Password == user.Password).FirstOrDefault();
         }
 
         public IEnumerable<User> GetAllUsers()

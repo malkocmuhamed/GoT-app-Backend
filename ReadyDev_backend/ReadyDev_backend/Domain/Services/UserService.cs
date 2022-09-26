@@ -22,13 +22,18 @@ namespace ReadyDev_backend.Domain.Services
             return _userRepository.GetAllUsers();
         }
 
-        public Task<User> GetUserById(int id)
+        public User GetUser(User user)
         {
-            return _userRepository.GetUserById(id);
+            return _userRepository.GetUser(user);
         }
-        public Task CreateUser(User user)
+
+        public async Task<User> GetUserById(int id)
         {
-            return _userRepository.CreateUser(user);
+            return await _userRepository.GetUserById(id);
+        }
+        public void CreateUser(User user)
+        {
+            _userRepository.CreateUser(user);
         }
 
     }

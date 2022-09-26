@@ -17,10 +17,15 @@ namespace ReadyDev_backend.DAL.Repositories
             this._context = context;
         }
 
-        public async Task CreateFamily(Family family)
+        public List<Family> GetFamiliesByUser(int userId)
+        {
+            return _context.Families.Where(family => family.UserId == userId).ToList();
+        }
+
+        public void CreateFamily(Family family)
         {
             _context.Families.Add(family);
-            await _context.SaveChangesAsync();
+             _context.SaveChanges();
         }
 
         public IEnumerable<Family> GetAllFamilies()
@@ -28,16 +33,16 @@ namespace ReadyDev_backend.DAL.Repositories
             return _context.Families;
         }
 
-        public async Task EditFamily(Family family)
+        public void EditFamily(Family family)
         {
             _context.Families.Update(family);
-            await _context.SaveChangesAsync();
+            _context.SaveChangesAsync();
         }
 
-        public async Task DeleteFamily(Family family)
+        public void DeleteFamily(Family family)
         {
             _context.Families.Remove(family);
-            await _context.SaveChangesAsync();
+            _context.SaveChangesAsync();
         }
 
         public async Task<Family> GetFamilyById(int id)

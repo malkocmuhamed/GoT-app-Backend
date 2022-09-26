@@ -17,9 +17,14 @@ namespace ReadyDev_backend.Domain.Services
             this._familyRepository = familyRepository;
         }
 
-        public Task CreateFamily(Family family)
+        public void CreateFamily(Family family)
         {
-            return _familyRepository.CreateFamily(family);
+             _familyRepository.CreateFamily(family);
+        }
+
+        public List<Family> GetFamiliesByUser(int userId)
+        {
+           return  _familyRepository.GetFamiliesByUser(userId);
         }
 
         public IEnumerable<Family> GetAllFamilies()
@@ -27,22 +32,22 @@ namespace ReadyDev_backend.Domain.Services
             return _familyRepository.GetAllFamilies();
         }
 
-        public Task EditFamily(Family familyInDB, Family family)
+        public void EditFamily(Family familyInDB, Family family)
         {
             familyInDB.FamilyName = family.FamilyName;
             familyInDB.Logo = family.Logo;
             familyInDB.Representative = family.Representative;
-            return _familyRepository.EditFamily(familyInDB);
+             _familyRepository.EditFamily(familyInDB);
         }
 
-        public Task DeleteFamily(Family family)
+        public void DeleteFamily(Family family)
         {
-            return _familyRepository.DeleteFamily(family);
+            _familyRepository.DeleteFamily(family);
         }
 
-        public Task<Family> GetFamilyById(int id)
+        public async Task<Family> GetFamilyById(int id)
         {
-            return _familyRepository.GetFamilyById(id);
+            return await _familyRepository.GetFamilyById(id);
         }
     }
 }

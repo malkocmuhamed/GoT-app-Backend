@@ -12,6 +12,8 @@ namespace ReadyDev_backend.DAL.Interfaces
 
         public IEnumerable<User> GetAllUsers();
 
+        public User GetUser(User user);
+
         public Task<User> GetUserById(int id);
 
         public Task CreateUser(User user);
